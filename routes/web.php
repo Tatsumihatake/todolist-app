@@ -1,0 +1,24 @@
+<?php
+
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TaskController; // Jangan lupa import ini
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return redirect()->route('login');
+});
+
+Route::get('/dashboard', function () {
+    return redirect()->route('tasks.index');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    // Route Resource untuk CRUD Task
+    Route::resource('tasks', TaskController::class);
+    
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';
