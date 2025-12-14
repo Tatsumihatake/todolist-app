@@ -1,28 +1,42 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Tambah Tugas
-        </h2>
-    </x-slot>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-7 col-lg-6">
+                
+                <a href="{{ route('tasks.index') }}" class="text-decoration-none mb-4 d-inline-flex align-items-center fw-bold" style="color: #8b5cf6;">
+                    <i class="bi bi-arrow-left-circle-fill fs-4 me-2"></i> Kembali ke Dashboard
+                </a>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-            
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">
-                <form action="{{ route('tasks.store') }}" method="POST">
-                    @csrf
-                    <div class="mb-3">
-                        <label class="form-label">Judul Tugas</label>
-                        <input type="text" name="title" class="form-control" required>
+                <div class="custom-card p-4 p-md-5">
+                    <div class="text-center mb-5">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3 shadow-sm" 
+                            style="width: 80px; height: 80px; background: linear-gradient(135deg, #fdf2f8 0%, #f3e8ff 100%);">
+                            <i class="bi bi-plus-lg fs-1" style="color: #d946ef;"></i>
+                        </div>
+                        <h3 class="fw-bolder">Tugas Baru</h3>
+                        <p class="text-muted small">Apa targetmu hari ini?</p>
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Deskripsi</label>
-                        <textarea name="description" class="form-control" rows="3"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Simpan</button>
-                    <a href="{{ route('tasks.index') }}" class="btn btn-secondary">Batal</a>
-                </form>
+
+                    <form action="{{ route('tasks.store') }}" method="POST">
+                        @csrf
+                        
+                        <div class="mb-4">
+                            <label class="form-label fw-bold small text-muted text-uppercase ms-1">Judul Tugas</label>
+                            <input type="text" name="title" class="form-control form-control-lg bg-light border-0 py-3 px-3" placeholder="Contoh: Meeting Desain..." required style="border-radius: 12px;">
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold small text-muted text-uppercase ms-1">Deskripsi</label>
+                            <textarea name="description" class="form-control bg-light border-0 py-3 px-3" rows="4" placeholder="Detail tugas..." style="border-radius: 12px;"></textarea>
+                        </div>
+
+                        <div class="d-grid mt-5">
+                            <button type="submit" class="btn btn-custom py-3 fs-6 fw-bold rounded-4">
+                                Simpan Tugas
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

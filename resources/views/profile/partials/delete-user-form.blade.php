@@ -1,55 +1,38 @@
-<section class="space-y-6">
-    <header>
-        <h2 class="text-lg font-medium text-gray-900">
-            {{ __('Delete Account') }}
-        </h2>
+<section>
+    <p class="text-muted small mb-4">
+        Setelah akun dihapus, semua data dan tugas akan hilang permanen. Harap unduh data penting sebelum melanjutkan.
+    </p>
 
-        <p class="mt-1 text-sm text-gray-600">
-            {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.') }}
-        </p>
-    </header>
+    <button class="btn btn-danger px-4 rounded-pill fw-bold" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">
+        Hapus Akun Saya
+    </button>
 
-    <x-danger-button
-        x-data=""
-        x-on:click.prevent="$dispatch('open-modal', 'confirm-user-deletion')"
-    >{{ __('Delete Account') }}</x-danger-button>
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <form method="post" action="{{ route('profile.destroy') }}" class="modal-content border-0 shadow-lg rounded-4 p-3">
+                @csrf
+                @method('delete')
 
-    <x-modal name="confirm-user-deletion" :show="$errors->userDeletion->isNotEmpty()" focusable>
-        <form method="post" action="{{ route('profile.destroy') }}" class="p-6">
-            @csrf
-            @method('delete')
+                <div class="modal-body text-center">
+                    <div class="mb-3">
+                        <div class="rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: #fee2e2;">
+                            <i class="bi bi-exclamation-triangle-fill text-danger fs-3"></i>
+                        </div>
+                    </div>
+                    <h5 class="fw-bold text-danger">Yakin Hapus Akun?</h5>
+                    <p class="text-muted small">Masukkan password Anda untuk konfirmasi penghapusan permanen.</p>
 
-            <h2 class="text-lg font-medium text-gray-900">
-                {{ __('Are you sure you want to delete your account?') }}
-            </h2>
+                    <div class="mt-3">
+                        <input type="password" name="password" class="form-control text-center" placeholder="Password Anda" required>
+                        <x-input-error :messages="$errors->userDeletion->get('password')" class="mt-2 text-danger small" />
+                    </div>
 
-            <p class="mt-1 text-sm text-gray-600">
-                {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.') }}
-            </p>
-
-            <div class="mt-6">
-                <x-input-label for="password" value="{{ __('Password') }}" class="sr-only" />
-
-                <x-text-input
-                    id="password"
-                    name="password"
-                    type="password"
-                    class="mt-1 block w-3/4"
-                    placeholder="{{ __('Password') }}"
-                />
-
-                <x-input-error :messages="$errors->userDeletion->get('password')" class="mt-2" />
-            </div>
-
-            <div class="mt-6 flex justify-end">
-                <x-secondary-button x-on:click="$dispatch('close')">
-                    {{ __('Cancel') }}
-                </x-secondary-button>
-
-                <x-danger-button class="ms-3">
-                    {{ __('Delete Account') }}
-                </x-danger-button>
-            </div>
-        </form>
-    </x-modal>
+                    <div class="d-flex justify-content-center gap-2 mt-4">
+                        <button type="button" class="btn btn-light rounded-pill px-4 fw-bold" data-bs-dismiss="modal">Batal</button>
+                        <button type="submit" class="btn btn-danger rounded-pill px-4 fw-bold">Ya, Hapus Permanen</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </section>
