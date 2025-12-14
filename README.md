@@ -1,59 +1,122 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🚀 ToDoMaster - Next Gen Productivity App
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Project Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
-## About Laravel
+**ToDoMaster** adalah aplikasi manajemen tugas berbasis web yang dirancang dengan pendekatan **UI Modern (Berry Gradient Theme)**. Aplikasi ini tidak hanya berfokus pada fungsi CRUD, tetapi juga menekankan pada *User Experience* (UX), keamanan data, dan estetika visual yang memanjakan mata.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Dibuat sebagai pemenuhan Tugas Responsi Pemrograman Web, proyek ini mengimplementasikan konsep MVC (Model-View-Controller) yang kokoh menggunakan framework Laravel.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## ✨ Fitur Unggulan (Key Features)
 
-## Learning Laravel
+Aplikasi ini dilengkapi dengan fitur-fitur modern yang melampaui standar To-Do List biasa:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### 🎨 1. Berry Gradient Interface & Glassmorphism
+Antarmuka pengguna didesain dengan palet warna gradasi *Pink-Purple* yang konsisten, dilengkapi efek *Glassmorphism* pada kartu dan modal, memberikan kesan aplikasi premium.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 🔐 2. Advanced Security & Authentication
+* **Secure Login/Register:** Sistem autentikasi bawaan Laravel yang telah dimodifikasi total tampilannya.
+* **Password Visibility Toggle:** Fitur "Intip Password" (ikon mata) dengan posisi presisi untuk kenyamanan pengguna.
+* **Live Validation:** Memberikan umpan balik instan saat pengguna salah memasukkan data.
 
-## Laravel Sponsors
+### ⚡ 3. Interactive Task Management
+* **Smart Dashboard:** Menampilkan statistik tugas (Total, Proses, Selesai) dengan kartu visual yang menarik.
+* **Modal Confirmations:** Mencegah kesalahan hapus/edit dengan *Pop-up Modal* interaktif (bukan alert browser kaku).
+* **CRUD Lengkap:** Tambah, Baca, Edit, dan Hapus tugas dengan alur yang mulus.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 👤 4. Profile Control Center
+Halaman pengaturan akun terpadu di mana pengguna dapat:
+* Mengganti Nama & Email.
+* Mengubah Password dengan validasi keamanan.
+* Menghapus akun secara permanen (*Danger Zone*).
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 📸 Galeri Aplikasi (Showcase)
 
-## Contributing
+Berikut adalah tampilan antarmuka **ToDoMaster** yang telah selesai dikembangkan:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 🔐 Autentikasi & Keamanan
+Tampilan Login dan Register yang bersih dengan validasi real-time.
 
-## Code of Conduct
+| Halaman Login | Halaman Register |
+|:---:|:---:|
+| ![Login](screenshot/Login.png) | ![Register](screenshot/register.png) |
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 📊 Dashboard & Manajemen Tugas
+Pusat kendali produktivitas dengan statistik visual.
 
-## Security Vulnerabilities
+| Dashboard Utama | Tambah Tugas Baru |
+|:---:|:---:|
+| ![Dashboard](screenshot/dashboard.png) | ![Tambah Tugas](screenshot/Tambah_Tugas.png) |
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 🛠️ Interaksi & Edit Data
+Menggunakan Modal Pop-up untuk pengalaman pengguna yang lebih baik.
 
-## License
+| Edit Tugas | Lupa Password |
+|:---:|:---:|
+| ![Edit Tugas](screenshot/Edit_Tugas.png) | ![Forgot Password](screenshot/forget%20password.png) |
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### ⚙️ Pengaturan Profil
+Manajemen akun pengguna yang lengkap dan aman.
+
+![Profile Settings](screenshot/Profile.png)
+
+*(Catatan: Fitur Dark Mode tersedia di menu pengaturan)*
+![Dark Mode Switch](screenshot/Switch_Dark_Mode.png)
+
+---
+
+## 💻 Panduan Instalasi (Local Setup)
+
+Ingin menjalankan proyek ini di komputer lokal Anda? Ikuti langkah berikut:
+
+1.  **Clone Repository**
+    ```bash
+    git clone [https://github.com/Tatsumihatake/todolist-app.git](https://github.com/Tatsumihatake/todolist-app.git)
+    cd todolist-app
+    ```
+
+2.  **Install Dependencies**
+    ```bash
+    composer install
+    npm install
+    ```
+
+3.  **Konfigurasi Environment**
+    Duplikat file `.env.example` menjadi `.env`, lalu atur database:
+    ```bash
+    cp .env.example .env
+    ```
+    *Buka file .env dan sesuaikan `DB_DATABASE`, `DB_USERNAME`, dll.*
+
+4.  **Generate Key & Migrate**
+    ```bash
+    php artisan key:generate
+    php artisan migrate
+    ```
+
+5.  **Jalankan Server**
+    ```bash
+    npm run build
+    php artisan serve
+    ```
+    Buka browser dan akses: `http://127.0.0.1:8000`
+
+---
+
+## 👨‍💻 Kredit Pengembang
+
+Proyek ini dikembangkan dengan ❤️ oleh:
+
+* **Nama:** Muhammad Ilham Wiradisastra
+* **NIM:** 241111009
+* **Kampus:** UBHINUS
+* **Mata Kuliah:** Praktikum Pemrograman Web
+
+---
+*© 2025 ToDoMaster Project. All Rights Reserved.*
